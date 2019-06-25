@@ -48,7 +48,7 @@
         <!--Title-->
         <scene sceneID="Kih-DD-rgu">
             <objects>
-                <viewController id="lRb-Sb-3fB" sceneMemberID="viewController">
+                <viewController id="lRb-Sb-3fB" customClass="addPhotoViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5SS-6N-nD4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,30 +63,45 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="captionBox:" destination="lRb-Sb-3fB" eventType="editingDidEnd" id="DVh-Cp-jir"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnc-eg-sG7">
                                 <rect key="frame" x="16" y="552" width="154" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="camera"/>
+                                <connections>
+                                    <action selector="cameraButton:" destination="lRb-Sb-3fB" eventType="touchUpInside" id="zat-dY-Qly"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-fy-IyW">
                                 <rect key="frame" x="172" y="552" width="187" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="save photos"/>
+                                <connections>
+                                    <action selector="savePhotosButton:" destination="lRb-Sb-3fB" eventType="touchUpInside" id="YhU-xT-HqT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJL-4h-bCx">
                                 <rect key="frame" x="110" y="640" width="154" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="albums"/>
+                                <connections>
+                                    <action selector="albumButton:" destination="lRb-Sb-3fB" eventType="touchUpInside" id="054-Ei-8GY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xqg-2L-u2N"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="gVM-EP-48s"/>
+                    <connections>
+                        <outlet property="imageVIew" destination="pGB-cv-eLj" id="CbL-Zs-oP9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ia4-gP-BDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

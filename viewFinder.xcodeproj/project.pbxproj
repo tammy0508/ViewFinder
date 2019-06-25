@@ -14,6 +14,7 @@
 		18EE648122C25F4400B5D3A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EE647F22C25F4400B5D3A4 /* LaunchScreen.storyboard */; };
 		18EE648C22C25F4400B5D3A4 /* viewFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE648B22C25F4400B5D3A4 /* viewFinderTests.swift */; };
 		18EE649722C25F4400B5D3A4 /* viewFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE649622C25F4400B5D3A4 /* viewFinderUITests.swift */; };
+		18EE64A522C2675D00B5D3A4 /* addPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64A422C2675D00B5D3A4 /* addPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		18EE649222C25F4400B5D3A4 /* viewFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viewFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EE649622C25F4400B5D3A4 /* viewFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewFinderUITests.swift; sourceTree = "<group>"; };
 		18EE649822C25F4400B5D3A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EE64A422C2675D00B5D3A4 /* addPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				18EE647322C25F4200B5D3A4 /* AppDelegate.swift */,
+				18EE64A422C2675D00B5D3A4 /* addPhotoViewController.swift */,
 				18EE647722C25F4200B5D3A4 /* Main.storyboard */,
 				18EE647D22C25F4400B5D3A4 /* Assets.xcassets */,
 				18EE647F22C25F4400B5D3A4 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				18EE647C22C25F4200B5D3A4 /* viewFinder.xcdatamodeld in Sources */,
 				18EE647422C25F4200B5D3A4 /* AppDelegate.swift in Sources */,
+				18EE64A522C2675D00B5D3A4 /* addPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
