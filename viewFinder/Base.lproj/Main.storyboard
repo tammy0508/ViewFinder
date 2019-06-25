@@ -13,7 +13,7 @@
         <!--ViewFinder-->
         <scene sceneID="Ubj-IO-PL3">
             <objects>
-                <tableViewController id="CgP-ZO-dQ2" sceneMemberID="viewController">
+                <tableViewController id="CgP-ZO-dQ2" customClass="PhotoTableViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ysy-XB-EjL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,9 +63,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="captionBox:" destination="lRb-Sb-3fB" eventType="editingDidEnd" id="DVh-Cp-jir"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnc-eg-sG7">
                                 <rect key="frame" x="16" y="552" width="154" height="55"/>
@@ -100,6 +97,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="gVM-EP-48s"/>
                     <connections>
+                        <outlet property="captionText" destination="nhy-F2-AeC" id="oih-GP-yUF"/>
                         <outlet property="imageVIew" destination="pGB-cv-eLj" id="CbL-Zs-oP9"/>
                     </connections>
                 </viewController>

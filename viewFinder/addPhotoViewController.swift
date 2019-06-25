@@ -12,22 +12,39 @@ class addPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
 
     var newScreen = UIImagePickerController()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          newScreen.delegate = self
     }
     
+    
     @IBAction func cameraButton(_ sender: UIButton) {
        newScreen.sourceType = .camera
         present(newScreen, animated: true, completion: nil)
-
     }
     
     
-//    @IBAction func savePhotosButton(_ sender: UIButton) {
-////        newScreen.sourceType = .savedPhotosAlbum
-////        present(newScreen, animated: true, completion: nil)
-//    }
+    @IBAction func savePhotosButton(_ sender: UIButton) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let photoToSave = Photos(entity: Photos.entity(), insertInto: context)
+            photoToSave.caption = captionText.text
+            
+            if let userImage = imageVIew.image {
+                
+                if let userImageData = userImage.pngData () {
+                    photoToSave.imageData = userImageData
+                    
+                }
+            }
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            
+            navigationController?.popViewController(animated: true)
+            
+        }
+    }
+    
     
     @IBAction func albumButton(_ sender: UIButton) {
         newScreen.sourceType = .photoLibrary
@@ -44,9 +61,6 @@ class addPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         newScreen.dismiss(animated: true, completion: nil)
     }
     
-//    @IBAction func captionBox(_ sender: UITextField) {
-//    }
-
-
-
+    @IBOutlet weak var captionText: UITextField!
+    
 }
