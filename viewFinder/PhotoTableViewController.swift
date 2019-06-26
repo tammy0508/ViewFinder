@@ -14,6 +14,8 @@ class PhotoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,7 +42,23 @@ class PhotoTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailSegue", sender: photos[indexPath.row])
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        if segue.identifier == "detailSegue" {
+            
+            if let photoDetailView = segue.destination as? PhotoDetailViewController {
+                
+                if let photoToSend = sender as? Photos {
+                    photoDetailView.photos = photoToSend
+                }
+                
+            }
+        }
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photos.count

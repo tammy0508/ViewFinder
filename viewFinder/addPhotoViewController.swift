@@ -53,6 +53,7 @@ class addPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     
     
     @IBOutlet weak var imageVIew: UIImageView!
+    
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageVIew.image = selectedImage

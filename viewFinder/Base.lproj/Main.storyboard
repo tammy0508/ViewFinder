@@ -10,6 +10,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="DO9-lw-KdP">
+            <objects>
+                <viewController id="e8Q-hP-EP8" customClass="PhotoDetailViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="amz-rP-gbW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VN6-hV-cp3">
+                                <rect key="frame" x="16" y="119" width="343" height="482"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yq1-MA-yEo"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoView" destination="VN6-hV-cp3" id="iLK-86-CPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kh2-Qx-QTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="-584.48275862068965"/>
+        </scene>
         <!--ViewFinder-->
         <scene sceneID="Ubj-IO-PL3">
             <objects>
@@ -36,10 +60,13 @@
                     <navigationItem key="navigationItem" title="ViewFinder" id="5dK-aj-l4t">
                         <barButtonItem key="rightBarButtonItem" title="+" id="Kqt-Ru-6QN">
                             <connections>
-                                <segue destination="lRb-Sb-3fB" kind="show" id="R6v-gc-GfA"/>
+                                <segue destination="lRb-Sb-3fB" kind="show" identifier="" id="R6v-gc-GfA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="e8Q-hP-EP8" kind="show" identifier="detailSegue" id="1Lx-kZ-RAX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F84-ZJ-ber" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
